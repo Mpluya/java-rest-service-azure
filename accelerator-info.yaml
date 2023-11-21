@@ -1,0 +1,35 @@
+id: 63d90d0f-7840-441b-9c7d-acf95d2297a1
+timestamp: 2023-11-21T13:11:09.245Z
+source: TAP-GUI
+username: mpluya
+accelerator:
+  name: java-rest-service
+fragments:
+  - name: build-wrapper-gradle
+  - name: build-wrapper-maven
+  - name: live-update
+  - name: spring-boot-database
+  - name: spring-boot-h2
+  - name: spring-boot-mysql
+  - name: spring-boot-postgresql
+  - name: tap-workload
+  - name: testcontainers-mysql
+  - name: testcontainers-postgresql
+options:
+  bsGitBranch: main
+  projectName: java-rest-service-azure
+  artifactId: customer-profile
+  groupId: com.example
+  packageName: com.example.customerprofile
+  buildTool: maven
+  exposeOpenAPIEndpoint: true
+  databaseType: postgres
+  databaseMigrationTool: flyway
+  databaseIntegrationTestType: testcontainers
+  includeBuildToolWrapper: true
+  apiSystem: profile-management-azure
+  apiOwner: customer-relations-department-azure
+  apiDescription: Manage customer profiles
+  databaseName: customer-database
+  liveUpdateIDESupport: true
+  bsGitRepository: github.com?owner=Mpluya&repo=java-rest-service-azure
