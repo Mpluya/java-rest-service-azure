@@ -3,12 +3,11 @@ kind: ClassClaim
 metadata:
   annotations:
     classclaims.services.apps.tanzu.vmware.com/xrd-name: xpostgresqlinstances.bindable.database.example.org
-  finalizers:
-  - classclaims.services.apps.tanzu.vmware.com/provision-finalizer
   name: customer-database
   namespace: mae
 spec:
   classRef:
     name: azure-postgres 
   parameters:
-    storageGB: 10
+    parameters:
+      storageGB: 10
