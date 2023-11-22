@@ -1,11 +1,11 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: customer-profile
+  name: java-rest-service-azure
+  namespace: mae
   labels:
     apps.tanzu.vmware.com/workload-type: web
-    app.kubernetes.io/part-of: customer-profile
-    apps.tanzu.vmware.com/has-tests: "true"
+    app.kubernetes.io/part-of: java-rest-service-azure
     apis.apps.tanzu.vmware.com/register-api: "true"
     apps.tanzu.vmware.com/auto-configure-actuators: "true"
 spec:
@@ -17,6 +17,16 @@ spec:
     - name: annotations
       value:
         autoscaling.knative.dev/minScale: "1"
+    - name: image_scanner_template_name
+      value: image-scanner-template
+    - name: scanning_source_policy
+      value: lax-scan-policy
+    - name: scanning_image_policy
+      value: lax-scan-policy
+    - name: testing_pipeline_matching_labels
+      value:
+        apps.tanzu.vmware.com/pipeline: test
+        apps.tanzu.vmware.com/language: java
     - name: api_descriptor
       value:
         type: openapi
@@ -25,9 +35,11 @@ spec:
         owner: customer-relations-department-azure
         system: profile-management-azure
         description: Manage customer profiles
+    - name: gitops_ssh_secret
+      value: tenant-gitops-ssh
   source:
     git:
-      url: https://github.com/Mpluya/java-rest-service-azure
+      url: ssh://git@github.com/Mpluya/java-rest-service-azure
       ref:
         branch: main
   serviceClaims:
