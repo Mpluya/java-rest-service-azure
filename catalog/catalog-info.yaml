@@ -10,4 +10,5 @@ spec:
   lifecycle: experimental
   owner: default-team
   providesApis:
-    - mae/java-rest-service-azure
+    - mae/java-rest-service-azure-107d9d22
+    - mae/java-rest-service-azure-2a72b9a8
