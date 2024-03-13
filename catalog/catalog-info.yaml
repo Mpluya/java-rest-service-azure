@@ -4,7 +4,7 @@ metadata:
   name: java-rest-service-azure
   namespace: mae
   annotations:
-    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=java-rest-service-azure,app.kubernetes.io/part-of=customer-profile"
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=java-rest-service-azure"
 spec:
   type: service
   lifecycle: experimental
