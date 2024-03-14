@@ -7,7 +7,7 @@ metadata:
     "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=java-rest-service-azure"
 spec:
   type: service
-  lifecycle: experimental
+  lifecycle: production
   owner: team-awesome
   providesApis:
     - mae/java-rest-service-azure
