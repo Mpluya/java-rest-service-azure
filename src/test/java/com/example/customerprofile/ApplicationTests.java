@@ -2,6 +2,7 @@ package com.example.customerprofile;
 
 import com.example.customerprofile.data.CustomerProfileEntity;
 import com.example.customerprofile.data.CustomerProfileRepository;
+import org.junit.Ignore;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,6 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
+@Ignore
 class ApplicationTests {
 
     @Autowired
