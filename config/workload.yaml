@@ -9,6 +9,7 @@ metadata:
     backstage.io/kubernetes-id: customer-profile
     apis.apps.tanzu.vmware.com/register-api: "true"
     apps.tanzu.vmware.com/auto-configure-actuators: "true"
+    apps.tanzu.vmware.com/has-tests: "true"
 spec:
   build:
     env:
