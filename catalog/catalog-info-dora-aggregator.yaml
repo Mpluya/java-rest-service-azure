@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hello-aggregator
+  namespace: mae
+  annotations:
+    "backstage.io/kubernetes-label-selector": "backstage.io/kubernetes-id: hello-system"
+spec:
+  type: service
+  lifecycle: production
+  owner: team-awesome
