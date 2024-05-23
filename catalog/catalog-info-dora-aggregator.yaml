@@ -4,7 +4,7 @@ metadata:
   name: hello-aggregator
   namespace: mae
   annotations:
-    "backstage.io/kubernetes-label-selector": "aggregate-name=hello-system"
+    "backstage.io/kubernetes-label-selector": "backstage.io/kubernetes-id=hello-system"
 spec:
   type: service
   lifecycle: production
